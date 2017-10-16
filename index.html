@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Landed by HTML5 UP</title>
+		<title>The Woke Drinker</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -19,29 +20,11 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<h1 id="logo"><a href="index.html">The Woke Drinker</a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#">Layouts</a>
-								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="#" class="button special">Sign Up</a></li>
+							<li><a href="#" class="onyellow button special">Sign Up</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -50,18 +33,40 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps. Lots of mother flipping apps.</p>
+							<h2>The Woke Drinker</h2>
+							<p>Are you aware of what you're drinking?<br />
+							Search below to see if you are supporting a macrobrewery</p>
+							<div class="12u 12u$(xsmall)"><input type="email" name="beer" id="beerQuery" placeholder="Search for Beer" /></div>
+							<div class="12u$ 12u$(xsmall)"><input type="submit" value="Search" id="searchButton" onclick="searchBeer();" class="fit special onyellow" /></div>
+
 						</header>
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+						<span class="image"><img src="images/beer_cheers.png" alt="" /></span>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
+
+					<!-- The Modal -->
+
+					<div id="resultModal" class="modal">
+
+					  <!-- Modal content -->
+					  <div class="modal-content">
+					    <div class="modal-header">
+					      <span class="close">&times;</span>
+					      <h2></h2>
+					    </div>
+					    <div class="modal-body">
+					    </div>
+					    <div class="modal-footer">
+					      <h3></h3>
+					    </div>
+					  </div>
+
+					</div>
 				</section>
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+					<span class="image fit main"><img src="images/tap_pic.jpg" alt="" /></span>
 					<div class="content">
 						<div class="container">
 							<div class="row">
@@ -214,6 +219,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/index.js"></script>
 
 	</body>
 </html>

@@ -35,31 +35,30 @@
 						<header>
 							<h2>The Woke Drinker</h2>
 							<p>Are you aware of what you're drinking?<br />
-							Search below to see if you are supporting a macrobrewery</p>
+							Search below to see what's really in your glass</p>
 							<div class="12u 12u$(xsmall)"><input type="email" name="beer" id="beerQuery" placeholder="Search for Beer" /></div>
-							<div class="12u$ 12u$(xsmall)"><input type="submit" value="Search" id="searchButton" onclick="searchBeer();" class="fit special onyellow" /></div>
+							<div class="12u$ 12u$(xsmall)"><input type="submit" value="Search" autocomplete="on" id="searchButton" onclick="searchBeer();" class="fit special onyellow" /></div>
+							<div id="outputbox">
+								<p id="outputcontent"></p>
+							  </div>
 
 						</header>
 						<span class="image"><img src="images/beer_cheers.png" alt="" /></span>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 
-					<!-- The Modal -->
+						<!-- The Modal -->
+						<div id="resultModal" class="modal">
 
-					<div id="resultModal" class="modal">
+						  <!-- Modal content -->
+						  <div class="modal-content">
+						    <span class="close">&times;</span>
+						    <p id="modal-header"></p>
+						    <p id="modal-img"></p>
+						    <p id="modal-footer"></p>
+						  </div>
 
-					  <!-- Modal content -->
-					  <div class="modal-content">
-					    <div class="modal-header">
-					      <span class="close">&times;</span>
-					      <h2></h2>
-					    </div>
-					    <div class="modal-body">
-					    </div>
-					    <div class="modal-footer">
-					      <h3></h3>
-					    </div>
-					  </div>
+						</div>
 
 					</div>
 				</section>
@@ -217,6 +216,8 @@
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/index.js"></script>

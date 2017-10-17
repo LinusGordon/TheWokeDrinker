@@ -3,15 +3,50 @@ function searchBeer() {
 	console.log(beer)
 }
 
+macros = ["10 Barrel Brewing" ,
+"Ballast Point Brewing", 
+"Birra Del Borgo ",
+"Blue Moon Brewing ",
+"Blue Point Brewing ",
+"Breckenridge Brewery", 
+"Camden Town Brewery",
+"Cervejaria Colorado" ,
+"Devils Backbone Brewing" ,
+"Dundee Brewing",
+"Elysian Brewing" ,
+"Fordham and Dominion Brewing",
+"Four Peaks Brewing",
+"Golden Road Brewing",
+"Goose Island Beer Company ",
+"Hop Valley Brewing",
+"Kona Brewing",
+"Lagunitas Brewing",
+"Leinenkugel",
+"Magic Hat Brewing",
+"Meantime Brewing",
+"Mendocino Brewing",
+"Olde Saratoga Brewing",
+"Portland Brewing Company",
+"Pyramid Breweries",
+"Redhook Brewery",
+"Revolver Brewing",
+"Saint Archer Brewing",
+"Shock Top Brewing",
+"Terrapin Beer Company",
+"Wicked Weed Brewing",
+"Widmer Brewing"]
+
+
 function beerStatus(beer) {
 	$.get("https://api.brewerydb.com/v2/?key=0f6f55ba51e66e9bb11a437e3bedacbd&name=" + beer + "&withBreweries=y", function(data, status){
         console.log("Data: " + data + "\nStatus: " + status);
     });
-	if (beer == "AB") {
-		return "Macrobrewery"
-	} else {
-		return "Microbrewery"
+    for(i = 0; i < macros.length; i++) {
+		if(macros[i] == beer) {
+			return "Macrobrewery"
+		}
 	}
+	return "Microbrewery"
 }
 
 test = [{ value: 'AB'},{value:"Not Ab"}]
@@ -66,4 +101,4 @@ window.onclick = function(event) {
         $('#theImg').remove()
     }
 
-}
+}"

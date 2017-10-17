@@ -4,7 +4,7 @@ function searchBeer() {
 }
 
 function beerStatus(beer) {
-	$.get("http://api.brewerydb.com/v2/?key=0f6f55ba51e66e9bb11a437e3bedacbd&name=" + beer + "&withBreweries=y", function(data, status){
+	$.get("https://api.brewerydb.com/v2/?key=0f6f55ba51e66e9bb11a437e3bedacbd&name=" + beer + "&withBreweries=y", function(data, status){
         console.log("Data: " + data + "\nStatus: " + status);
     });
 	if (beer == "AB") {

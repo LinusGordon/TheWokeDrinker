@@ -1,4 +1,4 @@
-function searchBeer() {
+var searchBeer = function() {
 	beer = document.getElementById("beerQuery").value;
 	console.log(beer)
 }
@@ -101,4 +101,4 @@ window.onclick = function(event) {
         $('#theImg').remove()
     }
 
-}"
+}
